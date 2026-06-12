@@ -11,7 +11,7 @@ class MemberSeeder extends Seeder
     {
         DB::table('members')->insert([
             [
-                'nama' => 'Dzaki',
+                'nama' => 'Muhammad Fairuz Dzaki',
                 'nim' => '102022300430', // Sesuaikan NIM asli
                 'kelas' => 'SI-47-04',
                 'jurusan' => 'Sistem Informasi',
@@ -23,7 +23,7 @@ class MemberSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Diva',
+                'nama' => 'Diva Gemellia Putri ',
                 'nim' => '102022300233',
                 'kelas' => 'SI-47-04',
                 'jurusan' => 'Sistem Informasi',
@@ -35,7 +35,7 @@ class MemberSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Vibie',
+                'nama' => 'Vibie Alyvia',
                 'nim' => '102022300006',
                 'kelas' => 'SI-47-04',
                 'jurusan' => 'Sistem Informasi',
@@ -47,7 +47,7 @@ class MemberSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Wisnu',
+                'nama' => 'Wisnu Cakra Putra Pamungkas',
                 'nim' => '102022300259',
                 'kelas' => 'SI-47-04',
                 'jurusan' => 'Sistem Informasi',
@@ -59,7 +59,7 @@ class MemberSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Yudhis',
+                'nama' => 'M.Yudhistira',
                 'nim' => '102022300296',
                 'kelas' => 'SI-47-04',
                 'jurusan' => 'Sistem Informasi',

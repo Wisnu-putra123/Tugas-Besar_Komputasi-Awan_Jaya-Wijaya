@@ -10,21 +10,21 @@
         <div>
             <label class="block text-sm font-medium text-slate-700 mb-1">Ditugaskan Kepada</label>
             <select name="member_id" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" required>
-                <option value="" disabled selected>-- Pilih Ahli Kumpulan --</option>
+                <option value="" disabled selected>-- Pilih Member --</option>
                 @foreach($members as $member)
-                    <option value="{{ $member->id }}">{{ $member->nama }} ({{ $member->peranan ?? 'Ahli' }})</option>
+                    <option value="{{ $member->id }}">{{ $member->nama }}</option>
                 @endforeach
             </select>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-slate-700 mb-1">Deskripsi Tugasan</label>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Deskripsi Tugas</label>
             <textarea name="deskripsi_tugas" rows="4" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none" required></textarea>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1">Tarikh Akhir (Deadline)</label>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Tenggat Waktu</label>
                 <input type="date" name="deadline" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none" required>
             </div>
             <div>
