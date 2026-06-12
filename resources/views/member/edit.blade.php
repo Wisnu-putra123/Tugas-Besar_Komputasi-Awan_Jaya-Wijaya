@@ -4,7 +4,7 @@
 <div class="max-w-3xl mx-auto px-4 py-6">
     
     <div class="mb-6">
-        <a href="{{ route('members') }}" class="inline-flex items-center text-sm font-semibold text-slate-500 hover:text-slate-800 transition">
+        <a href="{{ route('members.index') }}" class="inline-flex items-center text-sm font-semibold text-slate-500 hover:text-slate-800 transition">
             <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
@@ -92,7 +92,7 @@
             </div> -->
 
             <div class="flex justify-end space-x-3 pt-6 border-t border-slate-100 mt-4">
-                <a href="{{ route('members') }}" 
+                <a href="{{ route('members.index') }}" 
                     class="px-5 py-3 text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-2xl transition text-sm font-semibold active:scale-[0.98]">
                     Batal
                 </a>

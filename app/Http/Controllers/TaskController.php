@@ -9,15 +9,47 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     // Menampilkan semua tugas
-    public function index()
+    public function index(Request $request)
     {
-        // Mengambil semua tugas beserta data member-nya (Eager Loading)
-        $tasks = Task::with('member')->latest()->get();
+        // 1. Inisialisasi query dasar beserta Eager Loading relasi member
+        $query = Task::with('member');
+
+        // 2. LOGIKA FILTER: Berdasarkan Status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // 3. LOGIKA FILTER: Berdasarkan Anggota Kelompok
+        if ($request->filled('member_id')) {
+            $query->where('member_id', $request->member_id);
+        }
+
+        // 4. LOGIKA SORTIR (PENGURUTAN)
+        $sort = $request->get('sort', 'terbaru'); // Default urutan jika kosong
+
+        switch ($sort) {
+            case 'deadline_terdekat':
+                $query->orderBy('deadline', 'asc');
+                break;
+            case 'deadline_terlama':
+                $query->orderBy('deadline', 'desc');
+                break;
+            case 'terlama':
+                $query->orderBy('created_at', 'asc');
+                break;
+            case 'terbaru':
+            default:
+                $query->orderBy('created_at', 'desc');
+                break;
+        }
+
+        // 5. Eksekusi query untuk mendapatkan data tugas terfilter
+        $tasks = $query->get();
+
+        // 6. Ambil semua data anggota untuk mengisi opsi pilihan filter di View
+        $members = Member::all();
         
-        // Nanti diaktifkan saat view sudah siap:
-        return view('tasks.index', compact('tasks'));
-        
-        return response()->json($tasks); // Sementara kembalikan data JSON untuk tes
+        return view('tasks.index', compact('tasks', 'members'));
     }
 
     // Menampilkan form tambah tugas

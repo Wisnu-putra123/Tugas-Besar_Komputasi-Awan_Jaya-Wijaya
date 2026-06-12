@@ -37,7 +37,7 @@ class AuthController extends Controller
         $request->session()->regenerate();
 
         // 4. Redirect langsung ke halaman daftar tugas dengan pesan sukses
-        return redirect()->route('tasks.index')->with('success', 'Registrasi berhasil dan Anda otomatis masuk ke sistem!');
+        return redirect()->route('members.index')->with('success', 'Registrasi berhasil dan Anda otomatis masuk ke sistem!');
     }
 
     // Menampilkan form login
@@ -58,7 +58,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->remember)) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('tasks.index'))->with('success', 'Selamat datang kembali!');
+            return redirect()->intended(route('members.index'))->with('success', 'Selamat datang kembali!');
         }
 
         return back()->withErrors([
