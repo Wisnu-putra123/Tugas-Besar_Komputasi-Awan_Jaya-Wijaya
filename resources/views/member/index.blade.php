@@ -62,7 +62,7 @@
 
                     <div class="mt-6 pt-4 border-t border-gray-200">
                         <a href="{{ route('members.edit', $member->id) }}" 
-                        class="flex items-center justify-center w-full bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-2.5 px-4 rounded-xl transition-all duration-200 text-sm active:scale-[0.98]">
+                        class="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-2.5 px-4 rounded-xl transition-all duration-200 text-sm active:scale-[0.98]">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                             </svg>
