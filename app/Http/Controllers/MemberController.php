@@ -57,6 +57,6 @@ class MemberController extends Controller
         $member->update($data);
 
         // Kembali ke halaman utama profil dengan notifikasi sukses
-        return redirect()->route('members')->with('success', 'Profil ' . $member->nama . ' berhasil diperbarui!');
+        return redirect()->route('members.index')->with('success', 'Profil ' . $member->nama . ' berhasil diperbarui!');
     }
 }
