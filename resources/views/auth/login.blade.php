@@ -12,9 +12,9 @@
         
         <div class="text-center mb-8">
             <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-inner text-2xl font-bold">
-                JW
+                {{ env('SERVER_INDICATOR', 'Lokal') }}
             </div>
-            <h2 class="text-2xl font-bold text-slate-800">Selamat Datang</h2>
+            <h2 class="text-2xl font-bold text-slate-800">Jaya Wijaya</h2>
             <p class="text-sm text-slate-500 mt-1">Masuk untuk mengelola tugas kelompok</p>
         </div>
 
