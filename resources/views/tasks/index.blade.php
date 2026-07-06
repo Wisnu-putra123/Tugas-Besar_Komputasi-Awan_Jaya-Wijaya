@@ -8,7 +8,7 @@
             <p class="text-sm text-slate-500 mt-0.5">Kelola, saring, dan pantau pembagian tugas tim Anda.</p>
         </div>
         <a href="{{ route('tasks.create') }}" class="w-full sm:w-auto px-4 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition shadow-sm font-semibold text-sm text-center active:scale-[0.98]">
-            + Tambah Tugasan
+            + Tambah Tugas
         </a>
     </div>
 
@@ -115,10 +115,10 @@
                         </td>
                         <td class="p-4 text-center space-x-2 whitespace-nowrap">
                             <a href="{{ route('tasks.edit', $task->id) }}" class="text-blue-500 hover:text-blue-700 font-medium">Edit</a>
-                            <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Adakah anda pasti mahu memadam tugasan ini?');">
+                            <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah Anda yakin ingin menghapus tugas ini?');">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-red-500 hover:text-red-700 font-medium">Hapus</button>
+                                <button type="submit" class="text-red-500 hover:text-red-700 font-medium cursor-pointer">Hapus</button>
                             </form>
                         </td>
                     </tr>
